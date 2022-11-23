@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+<body>
+  <main class="main">
+    <div class="container">
+      <div class="card">
+        <div class="card-header">
+          <div class="credit-card">
+            <div class="credit-card-front">
+              <img src="./images/card-logo.svg" class="credit-card-logo" alt="Credit Card Logo">
+              <div class="credit-card-details">
+                <p class="credit-card-number">0000 0000 0000 0000</p>
+                <div class="row">
+                  <div class="col-6">
+                    <p class="credit-card-name">Jane Appleseed</p>
+                  </div>
+                  <div class="col-6">
+                    <p class="credit-card-date"><span class="credit-card-month">00</span>/<span class="credit-card-year">00</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="credit-card-back">
+              <p class="credit-card-cvc">000</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="form-container">
+            <form class="form" method="post" action="#">
+              <div class="form-group">
+                <label>Cardholder Name</label>
+                <input type="text" class="form-field" name="card_name" placeholder="e.g. Jane Appleseed"/>
+              </div>
+              <div class="form-group">
+                <label>Card Number</label>
+                <input type="text" class="form-field" name="card_number" placeholder="e.g. 1234 5678 9123 0000" maxlength="19" />
+              </div>
+              <div class="row">
+                <div class="col-5">
+                  <div class="form-group mb-0">
+                    <label>Exp. Date (MM/YY)</label>
+                    <div class="row">
+                      <div class="col-6">
+                        <input type="text" class="form-field" name="card_month" placeholder="MM" maxlength="2" />
+                      </div>
+                      <div class="col-6">
+                        <input type="text" class="form-field" name="card_year" placeholder="YY" maxlength="2" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="form-group pl-10 mb-0">
+                    <label>CVC</label>
+                    <input type="text" class="form-field" name="card_cvc" placeholder="e.g. 123" maxlength="3" />
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="button confirm">Confirm</button>
+            </form>
+            <!-- Completed state start -->
+            <div class="form-success">
+              <img src="./images/icon-complete.svg" class="success-icon">
+              <h1 class="success-heading">Thank you!</h1>
+              <p class="success-text">We've added your card details</p>
+              <a href="#" class="button reset">Continue</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main> 
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  <script src="./app.js"></script> 
+</body>
+</html>
